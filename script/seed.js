@@ -23,7 +23,11 @@ async function seed() {
   const notebooks = await Promise.all([
     Notebook.create({ title: "All Notes", userId: 1}),
     Notebook.create({ title: "All Notes", userId: 2}),
-    Notebook.create({ title: "Work", userId: 1})
+    Notebook.create({ title: "Work", userId: 1}),
+    Notebook.create({ title: "Fun", userId: 1}),
+    Notebook.create({ title: "Not Fun", userId: 1}),
+    Notebook.create({ title: "Cool", userId: 1}),
+    Notebook.create({ title: "School", userId: 1})
   ]);
 
   console.log(`seeded ${notebooks.length} notebooks`);

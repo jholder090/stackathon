@@ -1,4 +1,4 @@
-/* GENERAL */
+/*************GENERAL************* */
 body {
   font-family: sans-serif;
   box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
 }
 
 #main {
-  height: 100%;
+  height: 80%;
   width: 100%;
   display: flex;
 }
@@ -27,17 +27,48 @@ label {
   display: block;
 }
 
-nav a {
-  display: inline-block;
-  margin: 1em;
-}
-
 form div {
   margin: 1em;
   display: inline-block;
 }
 
-/* ALL NOTEBOOKS */
+/*************NAVBAR************* */
+.navbar {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navAuth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navAuth > * {
+  margin: 0;
+}
+
+
+/* nav a {
+  display: inline-block;
+  margin: 1em;
+} */
+
+hr {
+  margin: 0;
+}
+
+/*************ALL NOTEBOOKS************* */
 .notebooksContainer {
   height: 100%;
   width: 100%;
@@ -48,9 +79,8 @@ form div {
 }
 
 .notebookContainer {
-  /* border: 1px solid black; */
   width: 400px;
-  height: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,4 +95,3 @@ form div {
   align-items: center;
 }
 
-.notebookTitle {}

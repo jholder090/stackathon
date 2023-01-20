@@ -1,3 +1,4 @@
+/* GENERAL */
 body {
   font-family: sans-serif;
 }
@@ -18,4 +19,9 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+/* ALL NOTEBOOKS */
+.notebook {
+  border: 1px solid black;
 }

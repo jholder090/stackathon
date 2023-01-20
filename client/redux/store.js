@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import authReducer from './authSlice';
-import allNotebooksReducer from './allNotebooksSlice';
+import allNotebooksReducer from './notebooksSlice';
+import allNotesReducer from './notesSlice'
 
 const store = configureStore({
   reducer: {
     auth: authReducer,
-    allNotebooks: allNotebooksReducer
+    allNotebooks: allNotebooksReducer,
+    allNotes: allNotesReducer
    },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

@@ -8,8 +8,8 @@ const Note = require('./models/Note')
 const Notebook = require('./models/Notebook')
 
 //associations could go here!
-User.hasMany(Note);
-Note.belongsTo(User);
+// User.hasMany(Note);
+// Note.belongsTo(User);
 
 Notebook.hasMany(Note);
 Note.belongsTo(Notebook);

@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import AuthForm from './AuthForm';
 import Home from './Home';
 import AllNotebooks from './AllNotebooks';
+import SingleNotebook from './SingleNotebook';
 import { me } from '../redux/store';
 
 /**
@@ -13,7 +14,6 @@ import { me } from '../redux/store';
 const AppRoutes = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   let id = useSelector((state) => state.auth.me.id);
-  console.log("APPROUTES ID", id)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,6 +25,7 @@ const AppRoutes = () => {
       {isLoggedIn ? (
         <Routes>
           <Route path={`/notebooks/${id}`} element={<AllNotebooks id={id}/>} />
+          <Route path={'/notebook/:notebookId'} element={<SingleNotebook id={id}/>} />
           {/* <Route path="/*" element={<Home />} />
           <Route to="/home" element={<Home />} /> */}
         </Routes>

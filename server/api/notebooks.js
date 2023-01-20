@@ -1,11 +1,11 @@
 const router = require('express').Router()
 const { models: { Notebook, Note }} = require('../db')
 
-// /api/notebooks/:id
-router.get('/:id', async (req, res, next) => {
+// /api/notebooks/:userId
+router.get('/:userId', async (req, res, next) => {
   try {
     const notebooks = await Notebook.findAll({
-      where: { userId: req.params.id},
+      where: { userId: req.params.userId},
       include: { model: Note }
       // explicitly select only the id and username fields - even though
       // users' passwords are encrypted, it won't help if we just

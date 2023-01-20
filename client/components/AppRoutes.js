@@ -13,6 +13,7 @@ import { me } from '../redux/store';
 const AppRoutes = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   let id = useSelector((state) => state.auth.me.id);
+  console.log("APPROUTES ID", id)
   const dispatch = useDispatch();
 
   useEffect(() => {

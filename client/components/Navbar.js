@@ -5,6 +5,7 @@ import { logout } from '../redux/store';
 
 const Navbar = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
+  let user = useSelector((state) => state.auth.me);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const logoutAndRedirectHome = () => {
@@ -18,6 +19,7 @@ const Navbar = () => {
       <nav>
         {isLoggedIn ? (
           <div>
+            <p>Welcome {user.username}!</p>
             {/* The navbar will show these links after you log in */}
             <Link to="/home">Home</Link>
             <button type="button" onClick={logoutAndRedirectHome}>

@@ -14,19 +14,21 @@ const AllNotebooks = ({ id }) => {
   }, [dispatch]);
 
   return (
-    <>
+
+    <div className="notebooksContainer">
       {notebooks.map((notebook) => {
         return (
-          <Link to={`/notebook/${notebook.id}`} key={notebook.id}>
-            <div className="notebook" >
-              <div>{notebook.title}</div>
-            </div>
-          </Link>
+          <div className="notebookContainer" >
+            <Link to={`/notebook/${notebook.id}`} key={notebook.id}>
+              <div className="notebook">
+                <h2 className="notebookTitle">{notebook.title}</h2>
+              </div>
+            </Link>
+          </div>
 
         )
       })}
-
-    </>
+    </div>
 
   )
 };

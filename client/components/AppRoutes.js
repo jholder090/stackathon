@@ -21,8 +21,8 @@ const AppRoutes = () => {
   }, []);
 
   return (
-    <div>
-      {isLoggedIn ? (
+    <div id="main">
+    {isLoggedIn ? (
         <Routes>
           <Route path={`/notebooks/${id}`} element={<AllNotebooks id={id}/>} />
           <Route path={'/notebook/:notebookId'} element={<SingleNotebook id={id}/>} />

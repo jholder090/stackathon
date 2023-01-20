@@ -5,10 +5,10 @@ import AppRoutes from './AppRoutes';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <AppRoutes />
-    </div>
+    </>
   );
 };
 

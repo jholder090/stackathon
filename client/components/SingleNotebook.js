@@ -8,9 +8,7 @@ const SingleNotebook = ({id}) => {
   const dispatch = useDispatch();
   const {notebookId} = useParams();
   let notebooks = useSelector(selectAllNotebooks);
-  console.log("NOTEBOOKS", notebooks)
   let filteredNotebook = notebooks.filter((notebook) => notebook.id == notebookId)
-  console.log("FILTERED NOTEBOOK", filteredNotebook[0])
 
   useEffect(() => {
     dispatch(fetchAllNotebooksAsync(id));

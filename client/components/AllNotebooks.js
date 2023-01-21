@@ -7,7 +7,6 @@ import { fetchAllNotebooksAsync, selectAllNotebooks } from "../redux/notebooksSl
 const AllNotebooks = ({ id }) => {
   const dispatch = useDispatch();
   let notebooks = useSelector(selectAllNotebooks);
-  console.log("NOTEBOOKS", notebooks)
 
   useEffect(() => {
     dispatch(fetchAllNotebooksAsync(id));

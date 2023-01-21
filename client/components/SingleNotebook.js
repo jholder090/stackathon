@@ -21,7 +21,7 @@ const SingleNotebook = ({id}) => {
     <NotebookBar id={id}/>
     {filteredNotebook.map(notebook => {
       return (
-        <div key={notebook.id}>{notebook.title}</div>
+        <div className="singleNotebook"key={notebook.id}>{notebook.title}</div>
       )
     })}
 

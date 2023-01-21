@@ -54,7 +54,7 @@ nav {
   align-items: center;
 }
 
-.navAuth > * {
+.navAuth>* {
   margin: 0;
 }
 
@@ -94,4 +94,36 @@ hr {
   justify-content: center;
   align-items: center;
 }
+
+/*************SINGLE NOTEBOOK************* */
+.notebookBar {
+  width: 20%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.notebookBarTitle {
+  height: 25%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notebookBarNoteContainer {
+  height: 75%;
+  border: 1px solid black;
+}
+
+.notebookBarNote {
+  height: 20%;
+  border: 1px solid black;
+}
+
+.singleNotebook {
+  width: 80%;
+  border: 1px solid black;
+}
+
 

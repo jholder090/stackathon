@@ -4,10 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchAllNotebooksAsync, selectAllNotebooks } from "../redux/notebooksSlice";
 import NotebookBar from "./NotebookBar";
+import TextEditor from "./textEditor/TextEditor";
 
-const SingleNotebook = ({id}) => {
+const SingleNotebook = ({ id }) => {
   const dispatch = useDispatch();
-  const {notebookId} = useParams();
+  const { notebookId } = useParams();
   let notebooks = useSelector(selectAllNotebooks);
   let filteredNotebook = notebooks.filter((notebook) => notebook.id == notebookId)
 
@@ -18,12 +19,18 @@ const SingleNotebook = ({id}) => {
 
   return (
     <>
-    <NotebookBar id={id}/>
-    {filteredNotebook.map(notebook => {
-      return (
-        <div className="singleNotebook"key={notebook.id}>{notebook.title}</div>
-      )
-    })}
+      <NotebookBar id={id} />
+      {filteredNotebook.map(notebook => {
+        return (
+          <>
+            <div className="singleNotebook" key={notebook.id}>
+              <div>{notebook.title}</div>
+              <TextEditor />
+            </div>
+
+          </>
+        )
+      })}
 
     </>
 
